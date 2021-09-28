@@ -33,7 +33,7 @@ echo " What VPN would you like to connect to $usrName ?"
 echo " "
 
 # Starter labs VIP VPN
-function starterPoint() {
+starterPoint() {
 	sudo openvpn $HOME/vpn/starting_point_$usrName.ovpn
 }
 
@@ -80,6 +80,6 @@ until [ "$selection" = "0" ]; do
 		3 ) clear ; endGames;;
 		4 ) clear ; releaseArena;;
 		0 ) clear ; exit;;
-		* ) clear ; incorrect_selection ;press_enter ;
+		* ) clear ; bad_option ;press_enter ;
 	esac
 done
