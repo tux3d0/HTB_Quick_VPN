@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # Script for connecting to different HTB VPNs
-# the current version of the script assumes that you store your VPN config files in $HOME/vpm
-#it also assumes that you have not renamed your ovpn config files
+# the current version of the script assumes that you store your VPN config files in $HOME/vpn
+# it also assumes that you have not renamed your ovpn config files
 
-#Future version will create the missing dir and check for any ovpn files to be moved to the vpn folder
+# Future version will create the missing dir and check for any ovpn files to be moved to the vpn folder
 
-#this was a quick 10min script that I hope others on the HTB community or any others find usefull when dealing with multiple VPNs
+# this was a quick 10min script that I hope others on the HTB community or any others might find useful when dealing with multiple VPNs
 
 # Created by Tuxnix
 
@@ -25,11 +25,11 @@ echo "
 
 echo ""
 echo " "
-echo " This wiill require Sudo access "
+echo "[!] This will require Sudo access"
 echo " "
-echo -n " Emter your HTB username :" 
+echo -n "[+] Enter your HTB username:" 
 read usrName
-echo " What VPN would you like to connect to $usrName ?"
+echo "[?] What VPN would you like to connect to $usrName ?"
 echo " "
 
 # Starter labs VIP VPN
@@ -53,13 +53,13 @@ releaseArena() {
 
 press_enter() {
 	  echo ""
-	  echo -n "	Press Enter to continue "
+	  echo -n "[!] Press Enter to continue "
 	  read
 	  clear
 }
 
 bad_option() {
-	echo " you have choosen an incorrect menu optiom....try again"
+	echo "[-] Incorrect Option - Please choose another on from the list."
 	clear
 }
 
@@ -68,10 +68,10 @@ until [ "$selection" = "0" ]; do
 	echo " 	1 )	Starter Labs	"
 	echo "	2 )	Machines	"
 	echo "	3 )	End Games	"
-	echo "	4 )	Release Arema	"
+	echo "	4 )	Release Arena	"
 	echo "	0 )	Exit		"
 	echo ""
-	echo -n " Emter your selection : "
+	echo -n "[+] Enter your selection : "
 	read selection
 	echo ""
 	case $selection in
