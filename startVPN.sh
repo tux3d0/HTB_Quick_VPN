@@ -51,6 +51,12 @@ releaseArena() {
 	sudo openvpn $HOME/vpn/release_arena_$usrName.ovpn
 }
 
+#Fortresses Labs VPN
+
+fortresses() {
+	sudo openvpn $HOME/vpn/fortresses_$usrName.ovpn
+}
+
 press_enter() {
 	  echo ""
 	  echo -n "[!] Press Enter to continue "
@@ -69,6 +75,7 @@ until [ "$selection" = "0" ]; do
 	echo "	2 )	Machines	"
 	echo "	3 )	End Games	"
 	echo "	4 )	Release Arena	"
+	echo "	5 )	Fortresses 	"
 	echo "	0 )	Exit		"
 	echo ""
 	echo -n "[+] Enter your selection : "
@@ -79,6 +86,7 @@ until [ "$selection" = "0" ]; do
 		2 ) clear ; labs ;;
 		3 ) clear ; endGames;;
 		4 ) clear ; releaseArena;;
+		5 ) clear ; fortresses;;
 		0 ) clear ; exit;;
 		* ) clear ; bad_option ;press_enter ;
 	esac
