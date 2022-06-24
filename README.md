@@ -7,3 +7,17 @@ If you have a different dir you have your files stored in, you can simply change
 More updates to come
 
 -Tuxnix
+
+# Customisation:
+
+You can select the VPNs from your current working directory by removing `$HOME/vpn`
+
+```sh
+[-] starterPoint() {
+	sudo openvpn $HOME/vpn/starting_point_$usrName.ovpn
+}
+[+] starterPoint() {
+	sudo openvpn starting_point_$usrName.ovpn
+}
+```
+This can also be used to select any folder you want instead of the home directory.
